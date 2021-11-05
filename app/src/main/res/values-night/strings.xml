@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="to_second">To Second!</string>
+    <string name="to_first">To First</string>
+    <string name="to_third">To Third!</string>
+</resources>
