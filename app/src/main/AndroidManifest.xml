@@ -10,16 +10,50 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLab3">
         <activity
-            android:name=".Activity1"
+            android:name=".task2.Activity1"
+            android:label="task2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity2" />
-        <activity android:name=".Activity3" />
+        <activity android:name=".task2.Activity2" />
+        <activity android:name=".task2.Activity3" />
+        <activity android:name=".ActivityAbout" />
+        <activity
+            android:name=".task3.Activity1_3"
+            android:launchMode="singleTask"
+            android:label="task3"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".task3.Activity2_3"
+            android:launchMode="singleTask"
+            />
+        <activity
+            android:name=".task3.Activity3_3"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".task4.Activity1_4"
+            android:label="task4"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".task5.MainActivity"
+            android:label="task5"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

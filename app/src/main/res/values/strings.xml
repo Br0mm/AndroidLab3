@@ -3,4 +3,6 @@
     <string name="to_second">To Second!</string>
     <string name="to_first">To First!</string>
     <string name="to_third">To Third!</string>
+    <string name="activity_about">About</string>
+    <string name="come_back">Return!</string>
 </resources>
