@@ -17,21 +17,27 @@ class Activity3_3 : AppCompatActivity() {
 
         val binding = Activity3Binding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.toSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             finish()
         }
 
-        binding.toFirst.setOnClickListener {
+        binding.bnToFirst.setOnClickListener {
             startActivity(Intent(this, Activity1_3::class.java))
         }
 
-        binding.bottomNav.setOnItemSelectedListener {
+        binding.navView.setOnItemSelectedListener {
             if (it.itemId == R.id.activityAbout) {
                 startActivity(Intent(this, ActivityAbout::class.java))
                 return@setOnItemSelectedListener true
             }
             false
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

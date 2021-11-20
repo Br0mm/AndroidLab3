@@ -11,9 +11,14 @@ class ActivityAbout : AppCompatActivity() {
 
         val binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.button.setOnClickListener {
             finish()
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

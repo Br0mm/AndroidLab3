@@ -14,7 +14,7 @@ class Activity1_4 : AppCompatActivity() {
         val binding = Activity1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             val intent = Intent(this, Activity1_4::class.java)
             intent.flags = FLAG_ACTIVITY_SINGLE_TOP
             startActivity(intent)

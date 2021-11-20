@@ -22,12 +22,16 @@ class MainActivity: AppCompatActivity() {
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
         setupActionBarWithNavController(navController)
-        binding.bottomNav.setOnItemSelectedListener {
+        binding.navView.setOnItemSelectedListener {
             if (it.itemId == R.id.activityAbout) {
                 navController.navigate(R.id.activityAbout)
                 return@setOnItemSelectedListener true
             }
             false
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

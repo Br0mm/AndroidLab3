@@ -15,11 +15,11 @@ class Activity1_3 : AppCompatActivity() {
         val binding = Activity1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             startActivity(Intent(this, Activity2_3::class.java))
         }
 
-        binding.bottomNav.setOnItemSelectedListener {
+        binding.navView.setOnItemSelectedListener {
             if (it.itemId == R.id.activityAbout) {
                 startActivity(Intent(this, ActivityAbout::class.java))
                 return@setOnItemSelectedListener true

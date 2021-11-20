@@ -25,7 +25,7 @@ class Fragment1 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        binding.toSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             val action = Fragment1Directions.actionFragment1ToFragment2()
             view.findNavController().navigate(action)
         }
