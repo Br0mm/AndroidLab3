@@ -3,6 +3,7 @@ package com.example.androidlab3.task2
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.example.androidlab3.BaseActivity
 import com.example.androidlab3.R
 
 class Activity2 : BaseActivity(R.layout.activity2) {

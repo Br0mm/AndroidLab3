@@ -1,11 +1,9 @@
-package com.example.androidlab3.task2
+package com.example.androidlab3
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
-import com.example.androidlab3.ActivityAbout
-import com.example.androidlab3.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 abstract class BaseActivity(@LayoutRes private val res: Int) : AppCompatActivity() {
