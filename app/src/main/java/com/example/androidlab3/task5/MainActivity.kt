@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.androidlab3.R
 import com.example.androidlab3.databinding.ActivityMainBinding
 
@@ -22,13 +23,7 @@ class MainActivity: AppCompatActivity() {
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
         setupActionBarWithNavController(navController)
-        binding.navView.setOnItemSelectedListener {
-            if (it.itemId == R.id.activityAbout) {
-                navController.navigate(R.id.activityAbout)
-                return@setOnItemSelectedListener true
-            }
-            false
-        }
+        binding.navView.setupWithNavController(navController)
     }
 
     override fun onSupportNavigateUp(): Boolean {

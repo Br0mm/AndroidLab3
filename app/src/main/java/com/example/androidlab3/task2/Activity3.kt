@@ -1,39 +1,25 @@
 package com.example.androidlab3.task2
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.example.androidlab3.ActivityAbout
+import android.view.View
 import com.example.androidlab3.R
-import com.example.androidlab3.databinding.Activity3Binding
 
-class Activity3 : AppCompatActivity() {
+class Activity3 : BaseActivity(R.layout.activity3) {
     companion object {
         const val TO_FIRST = 1
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val binding = Activity3Binding.inflate(layoutInflater)
-        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.bnToSecond.setOnClickListener {
+        findViewById<View>(R.id.bnToSecond).setOnClickListener {
             finish()
         }
 
-        binding.bnToFirst.setOnClickListener {
+        findViewById<View>(R.id.bnToFirst).setOnClickListener {
             setResult(TO_FIRST)
             finish()
-        }
-
-        binding.navView.setOnItemSelectedListener {
-            if (it.itemId == R.id.activityAbout) {
-                startActivity(Intent(this, ActivityAbout::class.java))
-                return@setOnItemSelectedListener true
-            }
-            false
         }
     }
 

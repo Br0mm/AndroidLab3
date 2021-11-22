@@ -5,5 +5,6 @@
         android:id="@+id/activityAbout"
         android:title="@string/activity_about"
         android:icon="@drawable/ic_baseline_help_24"
+        android:menuCategory="secondary"
         />
 </menu>

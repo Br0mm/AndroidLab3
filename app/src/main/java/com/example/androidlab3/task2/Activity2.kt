@@ -2,39 +2,22 @@ package com.example.androidlab3.task2
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.get
-import com.example.androidlab3.ActivityAbout
+import android.view.View
 import com.example.androidlab3.R
-import com.example.androidlab3.databinding.Activity2Binding
 
-class Activity2 : AppCompatActivity() {
+class Activity2 : BaseActivity(R.layout.activity2) {
     private val toFirstRequest = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val binding = Activity2Binding.inflate(layoutInflater)
-        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.bnToFirst.setOnClickListener {
+        findViewById<View>(R.id.bnToFirst).setOnClickListener {
             finish()
         }
 
-        binding.bnToThird.setOnClickListener {
+        findViewById<View>(R.id.bnToThird).setOnClickListener {
             startActivityForResult(Intent(this, Activity3::class.java), toFirstRequest)
-        }
-
-        binding.navView.get(0).setOnClickListener {
-            startActivity(Intent(this, ActivityAbout::class.java))
-        }
-        binding.navView.setOnItemSelectedListener {
-            if (it.itemId == R.id.activityAbout) {
-                startActivity(Intent(this, ActivityAbout::class.java))
-                return@setOnItemSelectedListener true
-            }
-            false
         }
     }
 
@@ -45,10 +28,5 @@ class Activity2 : AppCompatActivity() {
                 finish()
             }
         }
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        finish()
-        return true
     }
 }
